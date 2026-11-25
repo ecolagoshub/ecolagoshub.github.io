@@ -1,9 +1,8 @@
-// Paste your Firebase web app config here (Firebase console > Project settings > Your apps).
-export const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+const firebaseConfig = {
+  apiKey: "AIzaSyCcAYXCE_9vPER7Ne9Q-4-M5Agi3dwZsR8",
+  authDomain: "eco-lagos-planner.firebaseapp.com",
+  projectId: "eco-lagos-planner",
+  storageBucket: "eco-lagos-planner.firebasestorage.app",
+  messagingSenderId: "715638169325",
+  appId: "1:715638169325:web:6a62614b26bfc4eeec76e4"
 };
