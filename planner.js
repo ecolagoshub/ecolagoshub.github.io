@@ -88,7 +88,10 @@ $('inst').onclick = async () => {
 let mode = 'in';
 function setMode(value) { mode = value; $('tIn').classList.toggle('on',value === 'in'); $('tUp').classList.toggle('on',value === 'up'); $('codeW').style.display = value === 'up' ? 'block' : 'none'; $('go').textContent = value === 'up' ? 'Create account' : 'Log in'; $('aerr').textContent = ''; }
 $('tIn').onclick = () => setMode('in'); $('tUp').onclick = () => setMode('up');
-const errorMessage = e => ({'auth/invalid-credential':'Wrong email or password.','auth/email-already-in-use':'That email already has an account. Log in instead.','auth/weak-password':'Password must be at least 6 characters.','auth/invalid-email':'Please enter a valid email.','auth/too-many-requests':'Too many attempts. Try again later.','bad-code':'Invalid access code.'}[e.code] || 'Something went wrong. Please try again.');
+const errorMessage = e => {
+  console.error("Registration error:", e);
+  return `${e.code || 'Unknown error'}: ${e.message || 'Please try again.'}`;
+};
 async function enter(user) {
   try {
     const member = await getDoc(doc(db,'members',user.uid));
@@ -110,7 +113,9 @@ $('go').onclick = async () => {
       signingUp = true;
       const credential = await createUserWithEmailAndPassword(auth,email,password);
       try { await setDoc(doc(db,'members',credential.user.uid), { email, code }); }
-      catch (e) { await credential.user.delete(); throw { code:'bad-code' }; }
+      catch (e) {
+  console.error("Membership registration failed:", e);
+  throw e; }
       signingUp = false; await enter(credential.user);
     }
   } catch (e) { $('aerr').textContent = errorMessage(e); }
