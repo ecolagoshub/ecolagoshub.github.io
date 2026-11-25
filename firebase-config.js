@@ -1,8 +1,8 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyCcAYXCE_9vPER7Ne9Q-4-M5Agi3dwZsR8",
-  authDomain: "eco-lagos-planner.firebaseapp.com",
-  projectId: "eco-lagos-planner",
-  storageBucket: "eco-lagos-planner.firebasestorage.app",
-  messagingSenderId: "715638169325",
-  appId: "1:715638169325:web:6a62614b26bfc4eeec76e4"
-};
+    apiKey: "AIzaSyDARgvEodeuSjyEP2vMGzreQwZMpqtn6kA",
+    authDomain: "eco-lagos-planner-hub.firebaseapp.com",
+    projectId: "eco-lagos-planner-hub",
+    storageBucket: "eco-lagos-planner-hub.firebasestorage.app",
+    messagingSenderId: "547366092941",
+    appId: "1:547366092941:web:1c88eefbee2d537b94a2c4"
+  };
