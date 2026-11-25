@@ -1,4 +1,4 @@
-const firebaseConfig = {
+export const firebaseConfig = {
     apiKey: "AIzaSyDARgvEodeuSjyEP2vMGzreQwZMpqtn6kA",
     authDomain: "eco-lagos-planner-hub.firebaseapp.com",
     projectId: "eco-lagos-planner-hub",
