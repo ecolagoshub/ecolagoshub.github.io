@@ -1,0 +1,5 @@
+/* Add task page only */
+.row{display:flex;gap:10px}
+.row>*{flex:1}
+.tip{margin-top:14px}
+.btn-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}

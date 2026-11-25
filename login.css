@@ -1,0 +1,5 @@
+/* Login / Sign up page only */
+.tabs2{display:flex;gap:6px;margin-bottom:6px}
+.tabs2 button{flex:1;padding:10px;border:1px solid var(--line);background:var(--white);color:var(--muted);border-radius:10px}
+.tabs2 button.on{background:var(--green);color:var(--white);border-color:var(--green)}
+body{padding-bottom:24px}

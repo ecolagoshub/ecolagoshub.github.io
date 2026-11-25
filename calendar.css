@@ -1,0 +1,14 @@
+/* Calendar page only */
+.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center}
+.head{font-size:12px;color:var(--muted)}
+.day{aspect-ratio:1;border:1px solid var(--line);border-radius:10px;background:var(--white);color:var(--text);position:relative;padding:0}
+.day.blank{visibility:hidden}
+.day.today{background:var(--green);color:var(--white);font-weight:700}
+.day.sel{border:2px solid var(--green-dark)}
+.day i{position:absolute;bottom:4px;left:50%;width:6px;height:6px;margin-left:-3px;border-radius:50%}
+.day i.r,.dot.r{background:var(--red)}
+.day i.g,.dot.g{background:var(--green)}
+.day.today i{box-shadow:0 0 0 2px var(--white)}
+.legend{font-size:12px;color:var(--muted)}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%}
+.today-key{background:var(--green);color:var(--white);border-radius:6px;padding:1px 6px}
