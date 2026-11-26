@@ -35,7 +35,11 @@ $('go').onclick=async()=>{
       signingUp=true;
       const c=await createUserWithEmailAndPassword(auth,em,pw);
       try{await setDoc(doc(db,'members',c.user.uid),{email:em,code})}  // Firestore checks the code
-      catch(e){await c.user.delete();throw {code:'bad-code'}}
+      catch(e){
+  console.error('Membership creation failed:', e.code, e.message);
+  await c.user.delete();
+  throw e;
+}
       location.href='add.html';
     }
   }catch(e){$('aerr').textContent=e.code==='bad-code'?'Invalid access code.':(messages[e.code]||'Something went wrong. Please try again.')}
